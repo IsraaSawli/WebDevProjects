@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products Page</title>
+    <style>
+      body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: plum;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.3em;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.product {
+    max-width: 300px;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    text-align: center;
+}
+
+.product img {
+    max-width: 100%; /* Set the maximum width for the product images */
+    height: auto; /* Preserve the aspect ratio of the image */
+}
+
+.product h2 {
+    margin-top: 1rem;
+    color:rgb(192, 104, 192);
+}
+
+.product p {
+    color: #555;
+}
+
+.product span {
+    font-weight: bold;
+    display: block;
+    margin: 1rem 0;
+    font-size: 1em;
+}
+
+.product button {
+    background-color: plum;
+    color: #fff;
+    font-size: 1em;
+    border: none;
+    padding: 13px 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.product button:hover {
+    background-color: #45a049;
+}
+
+.wishlist-btn img {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.wishlist-btn {
+    background-color: transparent;
+    color: #666;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+footer {
+    text-align: center;
+    background-color: #f9f9f9;
+    padding: 1rem;
+}
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Our Products</h1>
+    </header>
+    <main>
+        <section class="product">
+            <img src="i6.jpeg" alt="Product 1">
+            <h2>Ifran Repairing & Reviving Shampoo 500ml</h2>
+            <p>Ideal for:
+              Damaged hair, straight hair, wavy hair, curly hair
+              Safe for All Hair Types
+              Vegan, cruelty free, gluten free, sulfate free, paraben free</p>
+            <span>$15.00</span>
+            <button class="add-to-cart-btn" onclick=" addToCart(1)">Add to Cart</button>
+            
+        </section>
+
+        <section class="product">
+            <img src="i22.jpeg" alt="Product 2">
+            <h2>Ifran Miracle Conditioner 500ml</h2>
+            <p>
+              Benefits: <br>
+1. Provides Shine And Smoothness <br>
+2. Tames Flyaway Hair <br>
+3. Reduces Split Ends <br>
+4. Improves Manageability <br>
+5. Prevents Hair Breakage <br>
+6. Reduces The Fiber Hydrophilicity <br>
+7. Protects Hair From Chemical And Mechanical Trauma
+            </p>
+            <span>$15.00</span>
+            <button class="add-to-cart-btn">Add to Cart</button>
+        </section>
+
+        <section class="product">
+          <img src="i7.jpeg" alt="Product 1">
+          <h2>Ifran Wonder Oil 280ml</h2>
+          <p>Benefits:
+            Wonder oil helps in promoting hair growth and reducing hair loss by balancing the oil glands in the scalp. It also has antifungal and antibacterial properties and helps control dandruff. It helps fight hair loss and thickens hair. This oil also facilitates good scalp</p>
+          <span>$18.00</span>
+          <button class="add-to-cart-btn">Add to Cart</button>
+      </section>
+
+      <section class="product">
+        <img src="i13.jpeg" alt="Product 1">
+        <h2>Ifran Believe in Conditioner 200ml
+        </h2>
+        <p>Ifran Leave-In Conditioner is a lightweight, multi-tasking, hair conditioning cream enriched with Shea butter to hydrate, smooth, and detangle hair.</p>
+        <span>$17.00</span>
+        <button class="add-to-cart-btn">Add to Cart</button>
+    </section>
+
+    <section class="product">
+      <img src="i4.jpeg" alt="Product 1">
+      <h2>Ifran Heat protectant 250ml</h2>
+      <p>Heat Protectant helps protect hair up to 450 degrees.
+        Our combination of Shea Butter and Hyaluronic Acid intensely moisturizes hair, adding body and volume, while heat-protective Grape extract protects against damage caused by the high temperatures of styling tools.</p>
+      <span>$16.2</span>
+      <button class="add-to-cart-btn">Add to Cart</button>
+  </section>
+
+  <section class="product">
+    <img src="i5.jpeg" alt="Product 1">
+    <h2>Ifran Nourishing & Strengthening Hair Mask 300ml</h2>
+    <p>A deep treatment in nourishing, strengthening and preventing split ends. <br>
+      Benefits: <br>
+     Reduce hair breakage and damage <br>
+     Less frizz <br>
+     Stronger hair <br>
+     Give shinier and softer look <br>
+     Added moisture</p>
+    <span>$18.00</span>
+    <button class="add-to-cart-btn">Add to Cart</button>
+</section>
+
+<section class="product">
+  <img src="i8.jpeg" alt="Product 1">
+  <h2>Ifran Hair Serum 50ml</h2>
+  <p>Benefits : <br>
+    Boosts smoothness <br>
+    Reduces tangles  <br>
+    Promotes shine <br>
+    Enhances straightness or curls <br>
+    Protects against damage caused by: <br>
+    •chemical processing (like coloring, perming, or straightening) <br>
+    •heat damage (from blow-drying and heated styling tools) <br>
+    •environmental stress (like sun exposure) <br>
+    •mechanical stress (due to repeated hairstyling)
+    </p>
+  <span>$16.00</span>
+  <button class="add-to-cart-btn">Add to Cart</button>
+</section>
+
+<section class="product">
+    <img src="i31.jpeg" alt="Product 1">
+    <h2>Les Petites Ifran Mini Setl</h2>
+    <p>This set includes a mini shampoo, mini conditioner, mini hair mask, mini leave-in conditioner, and mini hair oil - all packed with nourishing ingredients to give your hair the love it deserves. Perfect for on-the-go touch-ups or trying out our products for the first time, this colorful set is a must-have for anyone looking to achieve healthy, gorgeous hair.
+      </p>
+    <span>$45.00</span>
+    <button class="add-to-cart-btn">Add to Cart</button>
+  </section>
+
+  <section class="product">
+    <img src="i32.jpeg" alt="Product 1">
+    <h2>Ifran Honey Hair Mist 60ml</h2>
+    <p>It is hair mist that will instantly brighten your day. Honey is a mouth-watering combination of honey and vanilla, it's like a beautiful sunny day in a bottle! This mist is intended to leave a refreshing, lasting scent without drying out or otherwise damaging your hair.It contains Vitamine E, vanilla , Honey, and Aloe Vera.
+        IFRAN hair mist help enhancing hair growth, volume and deep nourishment, And provides complete protection from the harmful UV rays.
+      </p>
+    <span>$10.80
+    </span>
+    <button class="add-to-cart-btn">Add to Cart</button>
+  </section>
+
+  <section class="product">
+    <img src="i35.jpeg" alt="Product 1">
+    <h2>Ifran Valhala Hair Mist For Him 60ml</h2>
+    <p>Attention all stylish men! Get ready to elevate your hair game with our new men's hair mist, Valhalla. With its elegant and sophisticated scent, this hair mist is designed to add the finishing touch to any hairstyle.
+
+        But, not just any ordinary hair mist, Valhalla is specially crafted to provide your hair with the best possible care. Unlike traditional perfumes, our hair mist does not contain alcohol which dries out the hair. Instead, it has been formulated with nourishing ingredients to promote healthy hair and scalp.
+        
+      </p>
+    <span>$7.20
+    </span>
+    <button class="add-to-cart-btn">Add to Cart</button>
+  </section>
+
+  <section class="product">
+    <img src="i34.jpeg" alt="Product 1">
+    <h2>Ifran Musk Hair Mist 60ml</h2>
+    <p>This mist is intended to leave a refreshing, lasting scent without drying out or otherwise damaging your hair. A spray of this Mist will leave you feeling empowered to express yourself with its earthy, floral and sensual scent.
+        
+      </p>
+    <span>$10.80
+    </span>
+    <button class="add-to-cart-btn">Add to Cart</button>
+  </section>
+
+  <section class="product">
+    <img src="i33.jpeg" alt="Product 1">
+    <h2>Ifran Bees Wax Stick 50ml</h2>
+    <p>Introducing our new natural styling wax stick, specially formulated to help you achieve sleek and polished ponytails and buns. Made with only the finest beeswax and olive oil, this wax stick is safe for all hair types and gentle on your scalp.
+        So, whether you're heading to the office or out on the town, our natural styling wax stick has got you covered. With its natural ingredients and easy-to-use design, it is the perfect solution for all your hair styling needs.
+        
+      </p>
+    <span>$20.00
+    </span>
+    <button class="add-to-cart-btn">Add to Cart</button>
+  </section>
+
+  <section class="product">
+    <img src="i40.jpeg" alt="Product 1">
+    <h2>Ifran Eyelash Booster 6ml</h2>
+    <p>Introducing our new product, the Eyelash & Eyebrow Booster, a luxurious blend of pure essential oils designed to promote fuller, thicker, and healthier lashes and brows.
+
+        This booster is made with only the finest ingredients, hand-selected for their nourishing properties, to enhance the natural beauty of your lashes and brows. Infused with a blend of carefully chosen essential oils, this booster delivers essential vitamins and nutrients directly to the hair follicles, promoting growth and improving the overall health of your lashes and brows.
+        
+      </p>
+    <span>$12.00
+    </span>
+    <button class="add-to-cart-btn">Add to Cart</button>
+  </section>
+
+
+
+  <section class="product">
+    <img src="i36.jpeg" alt="Product 1">
+    <h2>Ifran Tanning Oil 200ml</h2>
+    <p>Unlike traditional sun tanning oils, Shimmer Me Tanning Accelerator contains PEPTIDES, active ingredients designed to boost the skin's melanin levels in the lead-up to sun exposure to activate the natural tanning process, and advance faster, darker without long exposure to UV light
+        
+      </p>
+    <span>$16.38
+    </span>
+    <button class="add-to-cart-btn">Add to Cart</button>
+  </section>
+
+  <section class="product">
+    <img src="i50.jpeg" alt="Product 1">
+    <h2>Ifran Amethyst Hair Mist 60ml</h2>
+    <p>It is a Luxury and Sensual hair mist. It has a feminine touch. It is the safest alternative to perfume. This mist intended to leave a refreshing, lasting scent without drying out or otherwise damaging your hair. It contains accords of rose, gardenia, vitamine E, jasmine, and Aleo Vera and gives an elegant sparkling sillage.
+        IFRAN hair mist help enhancing hair growth, volume and deep nourishment, And provides complete protection from the harmful UV rays.
+        
+      </p>
+    <span>$10.80
+    </span>
+    <button class="add-to-cart-btn">Add to Cart</button>
+  </section>
+    </main>
+    
+</body>
+</html>
