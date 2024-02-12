@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <title>portfolio</title>
+        <link rel="stylesheet" href="portfolio.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    </head>
+    <body>
+        <header class="header">
+            <a href="#" class="logo">portfolio</a>
+            <nav class="navbar">
+                <a href="#" class="active">Home</a>
+                <a href="services.html" class="active">Services</a>
+                <a href="contact.html" class="active">Contact</a>
+                
+            </nav>
+             <div class="toggle">
+              <i class="bx bx-moon toggle-icon"></i>
+             </div>
+         </header>
+
+         <section class="home">
+            <div class="home-content">
+                <h3>Hello , I am</h3>
+                <h1>Israa Sawli</h1>
+                <p>As a web developer , I am enthusiastic about designing websites <br> that are easy to use and always eager to expand mt knowledge <br>
+                     of emerging technologies.</p>
+               
+                <div class="social-media">
+                 <a href="#" style="--i:7;"><i class="bx bxl-facebook"></i></a>
+                 <a href="#" style="--i:8;"><i class="bx bxl-instagram-alt"></i></a>
+                 <a href="#" style="--i:9;"><i class="bx bxl-linkedin"></i></a>
+                </div>     
+
+                <a href="#" class="btn">Download CV</a>
+            </div>
+
+            <div class="profession-container">
+                <div class="profession-box">
+                    <div class="profession"  style="--i:0;">
+                        <i class="bx bx-code-alt"></i>
+                        <h3>Web Developer</h3>
+                    </div>
+                    <div class="profession"  style="--i:1;">
+                        <i class="bx bx-palette"></i>
+                        <h3>Web Design</h3>
+                    </div>
+                    <div class="profession" style="--i:2;">
+                        <i class="bx bx-camera" ></i>
+                        <h3>Photographer</h3>
+                    </div>
+                    <div class="profession" style="--i:3;">
+                        <i class="bx bx-code-alt" ></i>
+                        <h3>React</h3>
+                    </div>
+                    <div class="circle"></div>
+                </div>
+                <div class="overlay"></div>
+            </div>
+            <div class="home-img">
+                <img src="./man-waiving-his-hand-3297463-3297463@0.png" >
+            </div>
+         </section>
+
+      
+
+         <script>
+            const toggleIcon=document.querySelector(".toggle-icon");
+            toggleIcon.addEventListener("click" , () => {
+                toggleIcon.classList.toggle("bx-sun");
+                document.body.classList.toggle("dark-mode");
+            });
+         </script>
+    </body>
+</html>

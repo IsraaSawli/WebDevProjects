@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>URL-download</title>
+        <link rel="stylesheet" href="link.css">
+    </head>
+    <body>
+        <div class="wrapper">
+            <header>
+                <h1>File Downloader</h1>
+                <p>Paste URL of image,vedio,or pdf to download.</p>
+            </header>
+            <form action="#">
+            <input type="url"  placeholder="Paste file url" required>
+            <button>Download File</button>
+            </form>
+        </div>
+
+        <script>
+            const fileInput = document.querySelector("input");
+            const downloadBtn = document.querySelector("button");
+        
+            downloadBtn.addEventListener("click", e => {
+                e.preventDefault(); //prevent form from submitting
+                fetchFile(fileInput.value);//When the download button is clicked, it calls the fetchFile function 
+                //with the file input value as its parameter.
+            });
+        
+            function fetchFile(url) {
+                fetch(url)//fetch() function to send a request to the url and retrieve the response
+                    .then(res => res.blob())////fetching file and returning as blob (size and type)
+                    .then(file => {
+                        let Url = URL.createObjectURL(file);// the fetchFile function creates a URL object from the blob using URL.createObjectURL(file).
+                        // This URL is used to create an anchor tag (<a>) element.
+                        let aTag = document.createElement("a");
+                        aTag.href = Url;
+                        aTag.download = fileInput.value.split("\\").pop();//For example, if fileInput.value is "C:\Users\JohnDoe\Documents\example.txt", 
+                        //fileInput.value.split("\\").pop() would return "example.txt"
+                        document.body.appendChild(aTag);
+                        aTag.click();
+                        aTag.remove();
+                    });
+            }  //this code fetches a file from a URL and returns it as a Blob object.
+            // The Blob object can then be used to create a URL object and download the file.
+        </script>
+        
+    </body>
+</html>

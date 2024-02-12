@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> Cancer Center</title>
+    <link rel="stylesheet" href="project3css.css">
+    <link rel="icon" href=".\icon33.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <style>
+        /*styling the cards*/
+        .container{
+        	display:flex;
+        	justify-content:center;
+        }
+        
+        .card{ 
+        background: radial-gradient(circle, rgba(174,199,238,1) 0%, rgba(59,116,207,1) 98%);
+        width:400px;
+        height:520px;
+        margin:10px; /*separate cards*/
+        border-radius:15px;
+        position:relative;
+        top:-80px;
+        
+        
+        }
+        .ptxt{
+        	
+        	font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 1.4em;
+            color:white;
+        }
+        div h2{
+        	color:#002D62;
+            font-family:Georgia, 'Times New Roman', Times, serif;}
+        
+        .card-image{
+        	background-color:purple;
+        	height:210px;
+        	margin-bottom:15px 15px 20px 20px;
+        	background-size:cover;
+        }
+        
+        .p1{
+        	background-image:url('./img2.jpg');
+        	
+        }
+        
+        .p2{
+        	background-image:url('./img4.jpg');	
+        	
+        }
+        
+        .p3{
+        	background-image:url('./img3.jpg');	
+        	
+        }
+        
+        .card p{
+        	padding:10px;
+        	
+        }
+        
+        .card h2{
+        	padding:10px;
+        }
+        
+        .card:hover{
+            background: rgb(128, 128, 128, 0.616);
+        	cursor: pointer;;
+        	transform:scale(1.03);
+        	transition:all 1s ease;
+        }
+        
+        
+        
+        /*styling the progress bars*/
+        .container2{
+            width:500px;
+            position:relative;
+            margin: auto;
+           right:-250px;
+           bottom:60px;
+        }
+        
+        .container2 .skills{
+            position:relative;
+            display:flex;
+            margin:20px 0;
+            padding:24px 10px 18px;
+            background: linear-gradient(#611661 0%,#333 10%,#222);
+            border-radius: 15px; 
+            border: 5px solid rgba(59,116,207,1);
+        }
+        
+        
+        .container2 .skills .name{
+            position: relative;
+            width:110px;
+            color:white;
+            margin-top: -2px;
+            text-transform: uppercase;
+            text-align: right;
+        
+        }
+        
+        .container2 .skills .value{
+            position: relative;
+            text-align: left;
+            width:40px;
+            color:white;
+            margin-top: -2px;
+            text-transform: uppercase;
+            
+        }
+        
+        .container2 .skills .percent{
+            position: relative;
+            width: calc(100% - 150px);
+            height: 20px;
+            margin: 0 10px;
+            border-radius: 10px;
+            background: #151515;
+            box-shadow: outset 0 0 10px #000;
+            
+        
+        
+        }
+        
+        .container2 .skills .percent .progress{
+            position: absolute;
+            width: 70%;
+            height: 100%;
+            border-radius: 10px;
+            background: white;
+            box-shadow: inset 0 0 2px #000;
+            animation: animate 15s ease-in forwards;
+        }
+        
+        @keyframes animate {
+            from{
+                width: 0;
+            }
+            
+        }
+        
+        .container2 .skills .percent .progress{
+            background: radial-gradient(circle, rgba(174,199,238,1) 0%, rgba(59,116,207,1) 98%);
+        }
+        
+        
+        
+        .container2 .skills:hover {
+            transform: scale(1.1);
+        }
+        
+        
+        .text{
+            padding:110px;
+            margin-left:10px;
+            
+        }
+        
+        .txt2{
+            padding: 70px;
+            margin: 10px;
+            color:#002D62;
+            font-size:1.7em;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        /*styling the box icons*/
+            
+            .fa-map-marker{  color:#002D62;
+               
+                padding:3px;
+                }
+            
+                .fa-clock-o  {
+                    color:#002D62;
+                    
+                    padding:3px;
+                }
+            
+                .fa-phone{
+                    color:#002D62;
+                    
+                    padding:3px;
+            
+                }    
+            
+                .fa-calendar{
+                    color:#002D62;
+                    font-size:35px;
+                    text-align: center;
+                  
+                }
+        
+        
+            button{
+                
+                display:inline-block;
+                cursor: pointer;
+                padding:20px 25px;
+                border:2px solid #002D62;
+                border-radius: 8px;
+                font-size:30px;
+               
+            }
+        
+            #demo{
+                text-align:left;
+                font-size: 2.5em;
+                font-style: italic;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                color:#51087E;
+                margin-left:95px;
+                position: relative;
+                top:70px;
+                
+            }
+        
+            
+            button:focus{
+                animation: pulse 0.5s ease-in-out;
+            }
+        
+        
+            
+            @keyframes pulse {
+                from{
+                    box-shadow: 50px 25px 25px rgb(174,199,238), 0 0 50px rgb(89, 127, 187);
+                }
+            }
+        
+        
+        /*styling the texts*/
+            .txt33{
+                font-size:1.5em;
+                margin-left:80px;
+                color:#04428a;
+                font-weight: bold;
+                padding: 20px;
+               width:550px;
+               font-family: Georgia, 'Times New Roman', Times, serif;
+               position: relative;
+               top:80px;
+                
+            }
+        
+        
+            .txt2::selection{
+                color:black;
+                background-color:yellow ;
+            }
+        
+            .txt4{
+                padding-bottom:80px;
+                margin: 70px;
+                color:#002D62;
+                font-size:1.7em;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+            }
+        
+        /*styling the loading welcome*/
+           .preloader{
+            position: fixed;
+            top:0;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+            background-color: #070707;
+            z-index: 100000000;
+            opacity: 0.8;
+           
+           }
+        
+           .preloader:before{
+            content:'welcome';
+            position: absolute;
+            font-size: 12em;
+            text-transform: uppercase;
+            color:rgba(255, 255, 255, 0.384);
+            font-weight: 900;
+           }
+           .preloader.active{
+            transform: translateY(-100vh); /*to push the preloader up */
+            transition: ease-in-out 2s;
+            transition-delay: 1s;
+           }
+        
+        
+           .hide{
+            opacity: 0;
+            transition: 1s;
+           
+           }
+        
+        /*styling the auto type text*/
+          .con{
+            color:#611661;
+            
+          } 
+          .con h1{
+            font-family:'Times New Roman', Times, serif;
+            font-size: 5em;
+            font-weight:bold;
+            text-align:center;
+          }
+        
+          .auto{
+            font-family:  'Times New Roman', Times, serif;
+            color:#002D62;
+          }
+    </style>
+</head>
+
+<body>
+    <div class="preloader">
+        <div class="counter">0</div>
+    </div>
+    <nav>
+        <div class="logo">
+            <p><span style="color:#51087E">C</span>ancer <span style="color:#51087E">C</span>enter</p>
+        </div>
+        <ul>
+            <li><a href="project33.html"><i class="fa fa-users " style="color:white;"></i>&nbsp;Home</a></li>
+            <li><a href="index.html"><i class="fa fa-users " style="color:white;"></i>&nbsp; About us</a></li>
+            <li><a href="classes.html"><i class="fa fa-usd" style="color:white;"></i>&nbsp;Donations</a> </li>
+            <li><a href="Schedule.html"><i class="fa fa-user-md" style="color:white;"></i>&nbsp;Expert DR.</a></li>
+            <li><a href="contact.html"><i class="fa fa-address-card" style="color:white;"></i>&nbsp;Contact us</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h2>cancer</h2>
+        <p class="txt2">At the Children's Cancer Center of Lebanon (CCCL), we treat children with cancer totally for free from the age of 0 to 18. Being totally dependent on donations, and with a yearly budget of 15 million dollars,many kids are counting on big hearted people to help them become survivors. Together we can Save Lives and Celebrate Hope! <br> <br> Provide support and resources for families going through cancer treatment in Virginia. Help, hope and hugs.<br>We work closely with key partners in the medical industry to provide the very best care possible to children.We work with a network of nine hospitals across Lebanon, giving <br> children access to the best facilities for optimal diagnosis and treatment. </p>
+        <p class="txt4">The Children's Cancer Center of Lebanon (CCCL) is a non-profit medical institution dedicated to the treatment of paediatric cancer. The center is affiliated with St. Jude Children's Research Hospital in Memphis, Tennessee. Children's Cancer Center of Lebanon was established under Notice no. 138AD with the affiliation of St. Jude Children's Research Hospital. </p>
+        <section class="container">
+            <div class="card">
+                <div class="card-image p1"></div>
+                <h2>Confident Care</h2>
+                <p class="ptxt">A life should be long brings to life the hopes, the dreams and also the potential that survives, when a child survives cancer. We hope we have created something that is persuasive.
+            </div>
+            <div class="card">
+                <div class="card-image p2"></div>
+                <h2>Convenient Location</h2>
+                <p class="ptxt">palliative care can help address pain, mobility and functional issues, mental and emotional health, nutrition, and many other concerns to help you live well durng your remedy. </p>
+            </div>
+            <div class="card">
+                <div class="card-image p3"></div>
+                <h2>Remedy Journey</h2>
+                <p class="ptxt">Our mission is to make life better for children with cancer and their families. Providing support and resources for families going through cancer treatment in Virginia. 20+ years of support.</p>
+            </div>
+        </section>
+        <div class="con">
+            <h1>Keep <span class="auto"></span></h1>
+        </div>
+        <p id="demo"></p>
+        <div class="txt33"> <button type="button" onclick="f2();"> <i class="fa fa-map-marker"></i> </button> <button type="button" onclick="f3();"> <i class="fa fa-clock-o"></i></button> <button type="button" onclick="f4();"> <i class="fa fa-phone"></i> </i> </button> <button type="button" onclick="f5();"> <i class="fa fa-calendar "></i></i></button> </div>
+        <div class="container2">
+            <div class="skills"> <span class="name">Patients</span>
+                <div class="percent">
+                    <div class="progress" style="width: 100%;"></div>
+                </div> <span class="value">2500</span>
+            </div>
+        </div>
+        <div class="container2">
+            <div class="skills"> <span class="name">Recovery</span>
+                <div class="percent">
+                    <div class="progress" style="width: 90%;"></div>
+                </div> <span class="value">2433</span>
+            </div>
+        </div>
+        <script src="https://unpkg.com/typed.js@2.0.14/dist/typed.umd.js"></script>
+        <script>
+            function f2(){
+              document.getElementById("demo").innerHTML= "BEIRUT-Msharafieh-near BM center";
+            }
+            
+            function f3(){
+              document.getElementById("demo").innerHTML= "Opens 8:30 AM ";
+            }
+            
+            function f4(){
+              document.getElementById("demo").innerHTML= "Phone:01 351 515"  ;
+            }
+            
+            function f5(){
+              document.getElementById("demo").innerHTML=  "Founded: April 12, 2002";
+            }
+            
+            function counter(){
+              var count=setInterval(function(){
+                var c=parseInt($('.counter').text());
+                $('.counter').text((++c).toString());
+                 if(c==100){
+                  clearInterval(count);
+                  $('.counter').addClass('hide');
+                  $('.preloader').addClass('active');
+                 }
+                
+              })
+            }counter()
+            
+            
+            $(document).ready(function(){   
+            $("#demo").hover(function(){
+              $(this).css("color", "#51087E");
+              }, function(){
+              $(this).css("color", "rgba(59,116,207,1)");
+            });
+            });
+            
+            $(document).ready(function(){  
+            $("button").click(function(){
+             $("#demo").show();
+            });
+            });
+            
+            var typed=new Typed(".auto",{
+            strings:["fighting","hoping","smiling"],
+            typeSpeed:400,
+            backSpeed:400,
+            
+            })
+            
+                    
+        </script>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <ul class="socials">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>copyright &copy; 2020 designed by health care</p>
+        </div>
+    </footer>
+</body>
+
+</html>

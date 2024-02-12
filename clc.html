@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>Calculator</title>
+        <link rel="stylesheet" href="clc.css">
+    </head>
+    <body>
+    
+        <div class="container">
+            <div class="clc">
+                <form >
+                    <div class="display">
+                        <input type="txt" id="dsply">
+                    </div>
+                    <div>
+                        <input type="button" value="AC" onclick= "dsply.value = '' ">
+                        <input type="button" value="DE" onclick= "dsply.value = dsply.value.toString().slice(0,-1) ">
+                        <input type="button" value="." onclick= "dsply.value += '.' ">
+                        <input type="button" value="/" onclick= "dsply.value += '/' ">
+                        
+                    </div>
+                    <div>
+                        <input type="button" value="1" onclick= "dsply.value += '1' ">
+                        <input type="button" value="2" onclick= "dsply.value += '2' ">
+                        <input type="button" value="3" onclick= "dsply.value += '3' ">
+                        <input type="button" value="-" onclick= "dsply.value += '-' ">
+                    </div>
+
+                    <div>
+                        <input type="button" value="4" onclick= "dsply.value += '4' ">
+                        <input type="button" value="5" onclick= "dsply.value += '5' ">
+                        <input type="button" value="6" onclick= "dsply.value += '6' ">
+                        <input type="button" value="+"  onclick= "dsply.value += '+' ">
+                    </div>
+
+                    <div>
+                        <input type="button" value="7" onclick= "dsply.value += '7' ">
+                        <input type="button" value="8" onclick= "dsply.value += '8' ">
+                        <input type="button" value="9" onclick= "dsply.value += '9' ">
+                        <input type="button" value="*"  onclick= "dsply.value += '*' ">
+                    </div>
+
+                    <div>
+                        <input type="button" value="00" onclick= "dsply.value += '00' ">
+                        <input type="button" value="0" onclick= "dsply.value += '0' ">
+                        <input type="button" value="=" class="equal" onclick="dsply.value=eval(dsply.value)">
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+    </body>
+</html>
